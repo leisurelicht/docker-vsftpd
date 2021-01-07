@@ -7,7 +7,8 @@ fi
 
 # If no env var has been specified, generate a random password for FTP_USER:
 if [ "$FTP_PASS" = "**Random**" ]; then
-    export FTP_PASS=`cat /dev/urandom | tr -dc A-Z-a-z-0-9 | head -c${1:-16}`
+    # export FTP_PASS=`cat /dev/urandom | tr -dc A-Z-a-z-0-9 | head -c${1:-16}`
+    export FTP_PASS="admin1234"
 fi
 
 # Do not log to STDOUT by default:
