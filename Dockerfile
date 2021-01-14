@@ -42,6 +42,10 @@ RUN chmod +x /usr/sbin/run-vsftpd.sh
 RUN mkdir -p /home/vsftpd/
 RUN chown -R ftp:ftp /home/vsftpd/
 
+WORKDIR /var/log/vsftpd
+RUN touch vsftpd.log
+RUN touch xferlog.log
+
 VOLUME /home/vsftpd
 VOLUME /var/log/vsftpd
 
